@@ -12,76 +12,49 @@
 			color: #ffffff;
 			font-size: 20px;
 		}
-		nav a {
+		nav ul {
+			display: none;
+			position: absolute;
+			right: 20px;
+			top: 60px;
+			background-color: #000000;
+			color: #ffffff;
+			list-style: none;
+			padding: 20px;
+		}
+		nav ul li {
 			display: block;
-			padding: 0 20px;
-			line-height: 60px;
+			padding: 10px 0;
+		}
+		nav ul li a {
+			display: block;
 			text-decoration: none;
 			color: #ffffff;
 		}
-		nav a:hover {
+		nav ul li a:hover {
 			background-color: #38220f;
 		}
-		#nav-toggle {
-			display: none;
-		}
-		@media (max-width: 600px) {
-			nav {
-				flex-direction: column;
-				position: fixed;
-				width: 100%;
-				height: 100%;
-				top: 60px;
-				left: -100%;
-				transition: all .3s;
-			}
-			nav.active {
-				left: 0;
-			}
-			#nav-toggle {
-				display: block;
-				cursor: pointer;
-				position: absolute;
-				top: 0;
-				right: 20px;
-				z-index: 1;
-				padding: 10px;
-				color: #ffffff;
-				font-size: 30px;
-			}
-			nav a {
-				line-height: 50px;
-				border-top: 1px solid #38220f;
-			}
-			h1 {
-				margin-top: 60px;
-			}
-		}
-		body {
-			background-color: #ece0d1;
-		}
-		
-		h1, h2 {
-			color: #000000;
-			margin: 0;
-			padding: 20px;
-		}
-		p {
-			color: #38220f;
-			margin: 0;
-			padding: 20px;
+		nav a.menu-icon {
+			display: block;
+			cursor: pointer;
+			padding: 10px;
+			color: #ffffff;
+			font-size: 30px;
 		}
 	</style>
 </head>
 <body>
 	<nav>
-		<a href="#about">About Me</a>
-		<a href="#services">Services and Prices</a>
-		<a href="#photos">Photos</a>
-		<a href="#location">Location</a>
-		<a href="#social">Social Media</a>
+		<a class="menu-icon" onclick="toggleMenu()">&#9776;</a>
+		<ul id="menu">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#photos">Photos</a></li>
+			<li><a href="#location">Location</a></li>
+			<li><a href="#social">Social Media</a></li>
+		</ul>
 	</nav>
-	<span id="nav-toggle" onclick="toggleNav()">&#9776;</span>
 	<h1>Welcome to My Business</h1>
 	<h2 id="about">About Me</h2>
 	<p>Hi, my name is [Your Name] and I am the owner of [Business Name]. I have been in the [Industry] industry for [Number] years and am passionate about providing high quality [Products/Services] to my customers. Thank you for visiting my website!</p>
@@ -120,5 +93,27 @@
 		<li><a href="[Instagram URL]">Instagram</a></li>
 		<li><a href="[Twitter URL]">Twitter</a></li>
 	</ul>
+	<script>
+		function toggleMenu() {
+			var menu = document.getElementById("menu");
+			menu.classList.toggle("active");
+		}
+	</script>
+	<script>
+		function toggleMenu() {
+			var menu = document.getElementById("menu");
+			menu.style.display = (menu.style.display === "block") ? "none" : "block";
+		}
+	</script>
+	<script>
+		window.onclick = function(event) {
+			if (!event.target.matches('.menu-icon')) {
+				var menu = document.getElementById("menu");
+				if (menu.style.display === "block") {
+					menu.style.display = "none";
+				}
+			}
+		}
+	</script>
 </body>
 </html>
