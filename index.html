@@ -21,6 +21,7 @@
 			color: #ffffff;
 			list-style: none;
 			padding: 20px;
+			transition: all 0.3s ease-in-out;
 		}
 		nav:hover ul {
 		  display: block;
@@ -96,6 +97,7 @@
 		<li><a href="[Instagram URL]">Instagram</a></li>
 		<li><a href="[Twitter URL]">Twitter</a></li>
 	</ul>
+	
 	<script>
 		function toggleMenu() {
 			var menu = document.getElementById("menu");
@@ -105,7 +107,11 @@
 	<script>
 		function toggleMenu() {
 			var menu = document.getElementById("menu");
-			menu.style.display = (menu.style.display === "block") ? "none" : "block";
+			if (menu.style.display === "none") {
+				menu.style.display = "block";
+			} else {
+				menu.style.display = "none";
+			}
 		}
 	</script>
 	<script>
