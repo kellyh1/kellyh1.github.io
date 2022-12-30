@@ -48,6 +48,7 @@
 	</style>
 	<link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
 	<nav>
 		<a class="menu-icon" onclick="toggleMenu()">&#9776;</a>
@@ -71,6 +72,14 @@
 				<h2>Delicious Food Menu</h2>
 			</div>
 			<div class="menu-tab">
+				<button data-toggle="container-1">Toggle container 1</button>
+				<button data-toggle="container-2">Toggle container 2</button>
+				<button data-toggle="container-3">Toggle container 3</button>
+
+				<div id="container-1">Word 1</div>
+				<div id="container-2">Word 2</div>
+				<div id="container-3">Word 3</div>
+
 				<ul class="nav nav-pills justify-content-center">
 					<li class="nav-item">
 						<a class="nav-link active" data-toggle="pill" href="#burgers">Burgers</a>
