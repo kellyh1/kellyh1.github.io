@@ -1,3 +1,10 @@
+.services {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+
 .food {
     position: relative;
     width: 100%;
