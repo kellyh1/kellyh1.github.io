@@ -13,7 +13,9 @@ function toggleVisibility(id) {
       elements[i].style.display = "none";
     }
   }
-  element.style.display = element.style.display === "none" ? "block" : "none";
+  if (element.style.display === "none") {
+    element.style.display = "block";
+  }
 }
 
 
