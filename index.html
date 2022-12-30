@@ -76,23 +76,7 @@
 				<button onclick="toggleVisibility('word-2')">Show word 2</button>
 				<button onclick="toggleVisibility('word-3')">Show word 3</button>
 
-				<div id="word-1" class="word">Word 1</div>
-				<div id="word-2" class="word" style="display: none;">Word 2</div>
-				<div id="word-3" class="word" style="display: none;">Word 3</div>
-
-
-				<ul class="nav nav-pills justify-content-center">
-					<li class="nav-item">
-						<a class="nav-link active" data-toggle="pill" href="#burgers">Burgers</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="pill" href="#snacks">Snacks</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="pill" href="#beverages">Beverages</a>
-					</li>
-				</ul>
-				<div class="tab-content">
+				<div id="word-1" class="word">
 					<div id="burgers" class="container tab-pane active">
 						<div class="row">
 							<div class="col-lg-7 col-md-12">
@@ -147,6 +131,8 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div id="word-2" class="word" style="display: none;">
 					<div id="snacks" class="container tab-pane fade">
 						<div class="row">
 							<div class="col-lg-7 col-md-12">
@@ -192,6 +178,8 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div id="word-3" class="word" style="display: none;">
 					<div id="beverages" class="container tab-pane fade">
 						<div class="row">
 							<div class="col-lg-7 col-md-12">
@@ -252,7 +240,7 @@
 	</div>
 	
 	<h2 id="photos">Photos</h2>
-	<img src="/images/sad.jpg" alt="[Image 1 Description]">
+	<img src="/images/sad.jpg" alt="[Image 1 Description]" width="400" height="300">
 	<img src="[Image 2]" alt="[Image 2 Description]">
 	<img src="[Image 3]" alt="[Image 3 Description]">
 	<h2 id="location">Location</h2>
