@@ -1,10 +1,3 @@
-$(document).ready(function() {
-  $('[data-toggle]').click(function() {
-    const target = $(this).data('toggle');
-    $('#' + target).toggle();
-  });
-});
-
 function toggleVisibility(id) {
   const element = document.getElementById(id);
   const elements = document.getElementsByClassName(element.className);
@@ -17,8 +10,3 @@ function toggleVisibility(id) {
     element.style.display = "block";
   }
 }
-
-
-document.querySelector('[data-toggle]').addEventListener('click', function() {
-  toggleVisibility(this.dataset.toggle);
-});
