@@ -1,19 +1,20 @@
-$(document).ready(function() {
-  $('[data-toggle]').click(function() {
-    const target = $(this).data('toggle');
-    $('#' + target).toggle();
-  });
-});
-
-function toggleVisibility(id) {
-  const element = document.getElementById(id);
-  if (element.style.display === "none") {
-    element.style.display = "block";
-  } else {
-    element.style.display = "none";
-  }
+function showWord(word) {
+  document.getElementById('word-' + word).style.display = 'block';
 }
 
-document.querySelector('[data-toggle]').addEventListener('click', function() {
-  toggleVisibility(this.dataset.toggle);
+function hideWord(word) {
+  document.getElementById('word-' + word).style.display = 'none';
+}
+
+document.querySelectorAll('[data-word]').forEach(function(button) {
+  button.addEventListener('click', function() {
+    const word = this.dataset.word;
+    for (let i = 1; i <= 3; i++) {
+      if (i === word) {
+        showWord(i);
+      } else {
+        hideWord(i);
+      }
+    }
+  });
 });
